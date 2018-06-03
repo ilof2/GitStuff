@@ -27,6 +27,4 @@ int main(){
 		printf("%d\n", Val);
 		Val = 0;
 	}	
-	
-
 }

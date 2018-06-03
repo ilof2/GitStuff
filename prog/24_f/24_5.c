@@ -8,15 +8,15 @@ void show_arr(double arr[], int n){
 }
 //-------------------------------
 
-int findMax(double arr[], int n)
+int findMin(double arr[], int n)
 {
-	int max=0.0;
+	int min=arr[0];
 	
 	for (int i = 0; i < n; i++){
-		if(arr[i]>max)
-			max = arr[i];
+		if(arr[i]<min)
+			min = arr[i];
 	}
-	return max;
+	return min;
 }
 
 // ------------------------------
@@ -24,15 +24,15 @@ int findMax(double arr[], int n)
 int main()
 {
 	const int n = 5;
-	int i, max;
+	int i, min;
 	double b[n], a[n];
 	for(i=0; i<n; i++){
 		printf("a[%d] = ", i);scanf("%lf", &a[i]);
 	}
 	printf("\n\n");
-	max = findMax(a, n);
+	min = findMin(a, n);
 	for(i=0; i<n; i++){
-		b[i]= a[i]/max;
+		b[i]= a[i]/min;
 	}
 
 	show_arr(b, n);
